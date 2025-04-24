@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Inter, Arial, 'Times New Roman';
+    box-sizing: border-box;
+}
+body{
+    background-color: #f1f1f1;
+}
+header{
+    width: 100vw;
+    display: flex;
+    background-color: #fff;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+    box-shadow: 0px 5px 10px rgb(171, 171, 171);
+    text-align: center;
+}
+header img{
+    width: 60px;
+}
+
+header div h1{
+    font-weight: 400;
+    font-size: 1.8rem;
+    font-family: 'Cascadia Mono', Arial, 'Times New Roman';
+}
+
+main{
+    margin-top: 25px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+main h1{
+    font-weight: 400;
+    font-family: 'Cascadia Mono', Arial, 'Times New Roman';
+}
+main h3{
+    font-weight: 400;
+    margin-top: 10px;
+    color: #2f2e2e;
+}
+.ingredientes-section{
+    margin-top: 30px;
+}
+button{
+    cursor: pointer;
+}
+form label{
+    display: flex;
+    align-items: center;
+}
+form input{
+    font-size: 1rem;
+    padding: 4px;
+    margin-right: 20px;
+}
+
+form button{
+    background-color: #fee6e3;
+    color: #111;
+    padding: 8px;
+    border-radius: 10px;
+    box-shadow: 8px 8px 0 black;
+    transition: box-shadow 0.3s ease;
+}
+form button:hover{
+    box-shadow: none;
+}
+form button:active{
+    box-shadow: inset 2px 2px 2px black;
+}
+.lista-ingredientes{
+    margin-top: 10px;
+    list-style: none;
+}
+.lista-ingredientes button{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.lista-ingredientes button:hover{
+    filter: brightness(1.2)
+}
+.lista-ingredientes img{
+    width: 20px;
+}
+.lista-ingredientes li{
+    display: flex;
+    align-items: center;
+    padding-right: 40px;
+    justify-content: space-between;
+}
+.lista-ingredientes li::marker{
+    content: "🥄";
+}
