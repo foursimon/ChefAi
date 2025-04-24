@@ -23,11 +23,11 @@ namespace server.Repositorios
 			string ingredientes = "";
 			foreach(string item in lista.Ingredientes)
 			{
-				ingredientes = ingredientes + "" + item;
+				ingredientes = ingredientes + ", " + item;
 			}
 			var resposta = await _chatClient.GetResponseAsync([
 				new ChatMessage(ChatRole.System, prompt),
-				new ChatMessage(ChatRole.User, ingredientes)
+				new ChatMessage(ChatRole.User, $"Consegue recomendar uma receita para mim usando esses ingredientes: {ingredientes}?")
 			]);
 			return resposta.Text;
 		}
