@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.RateLimiting;
 using Newtonsoft.Json;
 using server.Models;
 using server.Repositorios;
@@ -8,6 +9,7 @@ using System.Net;
 namespace server.Controllers
 {
 	[Route("api/[controller]")]
+	[EnableRateLimiting("fixoPorIp")]
 	[ApiController]
 	public class ChefAiController(IChefAiRepositorio _chefAi) : ControllerBase
 	{

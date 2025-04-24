@@ -4,6 +4,7 @@ using Microsoft.Extensions.AI;
 using Scalar.AspNetCore;
 using server.Repositorios;
 using System.Runtime.CompilerServices;
+using System.Threading.RateLimiting;
 
 namespace server.Dependencias
 {
@@ -11,11 +12,20 @@ namespace server.Dependencias
 	{
 		public static void AddDependecies(this WebApplicationBuilder builder)
 		{
-			//builder.Services.AddRateLimiter(opt =>
-			//{
-			//	opt.RejectionStatusCode = StatusCodes.Status429TooManyRequests;
-			//	opt.AddPolicy("fixedByIp", opt =>);
-			//});
+			builder.Services.AddRateLimiter(opt =>
+			{
+				opt.RejectionStatusCode = StatusCodes.Status429TooManyRequests;
+				opt.AddPolicy("fixoPorIp", httpContext =>
+					RateLimitPartition.GetFixedWindowLimiter(
+						partitionKey: httpContext.Connection.RemoteIpAddress?.ToString(),
+						factory: _ => new FixedWindowRateLimiterOptions
+						{
+							PermitLimit = 3,
+							Window = TimeSpan.FromMinutes(2)
+						}
+					)
+				);
+			});
 			builder.Services.AddCors(policy =>
 			{
 				policy.AddDefaultPolicy(opt =>
@@ -43,7 +53,7 @@ namespace server.Dependencias
 				opt.Theme = ScalarTheme.BluePlanet;
 				opt.WithDefaultHttpClient(ScalarTarget.Node, ScalarClient.Fetch);
 			});
-
+			app.UseRateLimiter();
 			app.UseCors();
 		}
 	}
