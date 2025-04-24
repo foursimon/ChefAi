@@ -98,6 +98,3 @@ form button:active{
     padding-right: 40px;
     justify-content: space-between;
 }
-.lista-ingredientes li::marker{
-    content: "🥄";
-}
