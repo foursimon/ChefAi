@@ -46,7 +46,17 @@ main h3{
     font-weight: 400;
     margin-top: 10px;
     color: #2f2e2e;
+    font-size: 1rem;
 }
+.title-container img{
+    width: 50px;
+}
+.title-container h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .ingredientes-section{
     margin-top: 30px;
 }
@@ -97,4 +107,46 @@ form button:active{
     align-items: center;
     padding-right: 40px;
     justify-content: space-between;
+}
+
+.receita-section{
+    background-color: #ffd0ca;
+    padding: 20px;
+    border-radius: 10px;
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.receita-section button{
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #f4a398;
+    box-shadow: 8px 8px 0 #e5685f;
+    border-color: #111;
+    transition: box-shadow 0.3s ease;
+}
+
+.receita-section button:hover{
+    box-shadow: none;
+}
+
+.receita-section h2{
+    font-size: 1.4rem;
+}
+
+.receita-section p{
+    color: #2f2e2e;
+}
+
+@media screen and (max-width: 733px) {
+    .receita-section{
+        flex-direction: column;
+        gap: 10px
+    }
+    .receita-section button{
+        width: 150px;
+    }
 }
