@@ -1,6 +1,7 @@
 import {useState} from "react"
 import { Lista } from "./Lista"
 import { Receita } from "./Receita"
+import recipe from "../assets/receita.png"
 export function Main(){
     const [ingredientes, setIngredientes] = useState([])
     function adicionarIngrediente(formData){
@@ -15,8 +16,10 @@ export function Main(){
     }
     return (
         <main>
-            <h1>Bem vindo ao Chef A.I.</h1>
-            <h3>Insira pelo menos três ingredientes no campo abaixo para gerar sua receita</h3>
+            <div className="title-container">
+                <h1>Bem vindo ao Chef A.I.  <img src={recipe} alt="livro de receitas com um chapéu de cozinheiro chefe estampado na capa" /></h1>
+                <h3>Insira pelo menos três ingredientes no campo abaixo para gerar sua receita</h3>
+            </div>
             <section className="ingredientes-section">
                 <form action={adicionarIngrediente}>
                     <label htmlFor="ingrediente" aria-label="Ingredientes">Ingredientes:</label>
