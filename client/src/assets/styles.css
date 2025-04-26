@@ -147,7 +147,7 @@ form button:active{
     margin-top: 20px;
     width: 60%;
 }
-.receita-gerada div{
+.receita-gerada div.border{
     padding: 20px;
     border: 2px solid black;
     border-radius: 10px;
