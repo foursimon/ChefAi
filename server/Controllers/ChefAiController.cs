@@ -13,6 +13,7 @@ namespace server.Controllers
 	public class ChefAiController(IChefAiRepositorio _chefAi) : ControllerBase
 	{
 		[HttpPost]
+		//Especificando qual resposta de sucesso é gerada para a documentação API
 		[ProducesResponseType(200)]
 		public async Task<ActionResult<string>> PegarReceita([FromBody]ReceitaAi ingredientes)
 		{
