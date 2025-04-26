@@ -10,6 +10,7 @@ body{
     background-color: #f1f1f1;
 }
 header{
+    min-width: 280px;
     width: 100vw;
     display: flex;
     background-color: #fff;
@@ -36,6 +37,7 @@ main{
     display: flex;
     justify-content: center;
     flex-direction: column;
+    min-width: 280px;
     align-items: center;
 }
 main h1{
@@ -139,6 +141,42 @@ form button:active{
 
 .receita-section p{
     color: #2f2e2e;
+}
+.receita-gerada{
+    text-align: justify;
+    margin-top: 20px;
+    width: 60%;
+}
+.receita-gerada div{
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+body{
+    overflow-x: hidden;
+}
+
+.carregando::after{
+    content: "";
+    width: 20px;
+    height: 20px;
+    border: 15px solid #dddddd;
+    border-top-color: #f4a398;
+    border-radius: 50%;
+    animation: carregando 1.2s ease infinite;
+}
+
+.carregando{
+    display: flex;
+    justify-content: center;
+}
+
+@keyframes carregando {
+    0%{
+        transform: rotate(0turn);
+    }100%{
+        transform: rotate(1turn);
+    }
 }
 
 @media screen and (max-width: 733px) {

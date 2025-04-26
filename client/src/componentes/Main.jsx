@@ -29,7 +29,7 @@ export function Main(){
                 </form>
             {ingredientes.length > 0 ? <Lista ingredientes={ingredientes} removerIngrediente={removerIngrediente} /> : undefined}
             </section>
-            {ingredientes.length >= 3 ? <Receita /> : undefined}
+            <Receita ingredientes={ingredientes}/>
         </main>
     )
 }
