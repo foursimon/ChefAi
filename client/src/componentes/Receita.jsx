@@ -2,16 +2,23 @@ import { gerarReceita } from "../api.js"
 import { useState } from "react"
 import ReactMarkdown from 'react-markdown'
 export function Receita(props){
+    //State responsável por armazenar a receita gerada pela IA no backend
     const [receita, setReceita] = useState()
+    //State responsável por definir se a animação de carregamento deverá aparecer
     const [carregar, setCarregar] = useState(false)
     async function pegarReceita(){
+        //mostro a animação de carregando para indicar ao usuário que sua receita está sendo processada
         setCarregar(true)
+        //pego a receita gerada pela IA do backend
         const resposta = await gerarReceita(props.ingredientes)
+        //removo a animação de carregando, pois a receita foi gerada
         setCarregar(false)
+        //mostro a receita na tela para o usuário
         setReceita(resposta)
     }
     return(
         <>
+            {/* Só mostro a opção de pegar uma receita se a lista de ingredientes tiver pelo menos três itens */}
             {props.ingredientes.length >= 3 ?
             <section className="receita-section">  
                 {carregar ? 
