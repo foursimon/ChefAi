@@ -27,7 +27,8 @@ export function Receita(props){
                 </>}
             </section> : undefined}
             <section className="receita-gerada">
-                {carregar ? <div className="carregando"></div> : <div className={receita ? "border": undefined}><ReactMarkdown>{receita}</ReactMarkdown></div>}
+                {carregar ? <div className="carregando"></div> : 
+                <div className={receita ? "border": undefined}><ReactMarkdown>{receita}</ReactMarkdown></div>}
             </section>
         </>
     )
