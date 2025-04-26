@@ -36,8 +36,8 @@ namespace server.Dependencias
 				});
 			});
 			builder.Services.AddScoped<IChefAiRepositorio, ChefAiRepositorio>();
-			var model = "Ministral-3B";
-			var uri = new Uri("https://models.inference.ai.azure.com");
+			var model = "deepseek/DeepSeek-V3-0324";
+			var uri = new Uri("https://models.github.ai/inference");
 			var credencial = new AzureKeyCredential(builder.Configuration["GITHUBTOKEN"]!);
 			builder.Services.AddSingleton(
 				new Azure.AI.Inference.ChatCompletionsClient(uri, credencial));
