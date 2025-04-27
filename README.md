@@ -69,18 +69,18 @@
 <h2><img src="./capa/generator.png" width="30px"/> Tecnologias utilizadas</h2>
 <h3><img src="./capa/funcao.png" width="25px "/> Backend</h3>
 <ul>
-    <li><img src="./capa/net.png" width="20px"/><b>.Net</b>: framework utilizado para criar a API e desenvolver todo o backend;<li>
-    <li><img src="./capa/linguagem.png" width="20px"/><b>Scalar</b>: documentação API escolhida para apresentar a API de forma mais estilizada;<li>
-    <li><img src="./capa/net.png" width="20px"/><b>Microsoft.Extensions.AI</b>: biblioteca usada para integrar modelos de inteligências artificiais ao sistema.<li>
+    <li><img src="./capa/net.png" width="25px"/><b>.Net</b>: framework utilizado para criar a API e desenvolver todo o backend;</li>
+    <li><img src="./capa/linguagem.png" width="25px"/><b>Scalar</b>: documentação API escolhida para apresentar a API de forma mais estilizada;</li>
+    <li><img src="./capa/net.png" width="25px"/><b>Microsoft.Extensions.AI</b>: biblioteca usada para integrar modelos de inteligências artificiais ao sistema.</li>
 </ul>
 
-<h3><img src="./capa/evento.png" width="25px "/> Frontend</h3>
+<h3><img src="./capa/evento.png" width="30px"/> Frontend</h3>
 <ul>
-    <li><img src="./capa/html.png" width="20px"/><b>HTML</b>: linguagem de marcação de hipertexto usada para definir uma raiz da página;<li>
-    <li><img src="./capa/css.png" width="20px"/><b>CSS</b>: linguagem de estilos em cascata usada para estilizar o site;<li>
-    <li><img src="./capa/javascript.png" width="20px"/><b>JS</b>: utilizado para realizar requisições HTTP para a API, enviando os ingredientes e retornando a receita gerada;<li>
-    <li><img src="./capa/react.svg" width="20px"/><b>React</b>: biblioteca usada para renderizar os componentes apresentados na página de forma dinâmica para o usuário;<li>
-    <li><img src="./capa/react.svg" width="20px"/><b>React-Markdown</b>: biblioteca usada para estilizar a receita enviada pela I.A. de forma automática.<li>
+    <li><img src="./capa/html.png" width="25px"/><b>HTML</b>: linguagem de marcação de hipertexto usada para definir uma raiz da página;</li>
+    <li><img src="./capa/css.png" width="25px"/><b>CSS</b>: linguagem de estilos em cascata usada para estilizar o site;</li>
+    <li><img src="./capa/javascript.png" width="25px"/><b>JS</b>: utilizado para realizar requisições HTTP para a API, enviando os ingredientes e retornando a receita gerada;</li>
+    <li><img src="./capa/react.svg" width="25px"/><b>React</b>: biblioteca usada para renderizar os componentes apresentados na página de forma dinâmica para o usuário;</li>
+    <li><img src="./capa/react.svg" width="25px"/><b>React-Markdown</b>: biblioteca usada para estilizar a receita enviada pela I.A. de forma automática.</li>
 </ul>
 <h2><img src="./capa/tv.png" width="30px">Demonstração</h2>
 <img src="./capa/showcase.gif" width="800px">
